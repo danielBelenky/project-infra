@@ -5,7 +5,7 @@ presubmits:
     - release-\d+\.\d+
     annotations:
       fork-per-release: "true"
-    always_run: true
+    always_run: false
     optional: false
     decorate: true
     decoration_config:
@@ -18,7 +18,7 @@ presubmits:
       preset-shared-images: "true"
     spec:
       nodeSelector:
-        type: bare-metal-external
+        type: bare-metal-external-new
       containers:
       - image: gcr.io/k8s-testimages/bootstrap:v20190516-c6832d9
         command:
